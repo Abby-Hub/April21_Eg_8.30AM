@@ -1,6 +1,6 @@
 package pack1;
 
-public class A implements X, Y {
+public final class A implements X, Y {
 
 	@Override
 	public void m1() {

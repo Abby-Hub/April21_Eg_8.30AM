@@ -15,8 +15,25 @@ public class PizzaOnline {
 
 	public static void main(String[] args) {
 		PizzaOnline po = new PizzaOnline();
-		VegPizza vp1 = new VegPizza(6, "PLAIN");
-		NonVegPizza nvp1 = new NonVegPizza(9, "DELUXE");
+		VegPizza vp1;
+		try {
+			vp1 = new VegPizza(6, "PLAIN");
+			float amt = po.order(vp1);
+			System.out.println(amt);
+		} catch (InvalidPizzaException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			System.err.println(e);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		/*NonVegPizza nvp1 = new NonVegPizza(9, "DELUXE");
 		VegPizza vp2 = new VegPizza(12, "SUPREME");
 		
 		float amt = po.order(vp1);
@@ -29,8 +46,13 @@ public class PizzaOnline {
 		System.out.println(amt);
 		
 		System.out.println(po.getTotalSales());
-		
-		new VegPizza(16, "REg");
+		*/
+		try {
+			new VegPizza(16, "REg");
+		} catch (InvalidPizzaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

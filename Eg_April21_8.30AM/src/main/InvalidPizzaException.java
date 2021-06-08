@@ -1,7 +1,7 @@
 package main;
 
 public class InvalidPizzaException extends Exception {
-	public InvalidPizzaException() {
-		
+	public InvalidPizzaException(String info) {
+		super(info);
 	}
 }
